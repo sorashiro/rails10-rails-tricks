@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/about' => 'page#about'
   get 'signup' => 'users#signup', :as => 'signup'
   get 'login' => 'users#login', :as => 'login'
+  post 'create_login_session' => 'users#create_login_session'
   resources :users, only: [:create]
 
   # issues
