@@ -1,2 +1,12 @@
-<h1>Users#signup</h1>
-<p>Find me in app/views/users/signup.html.erb</p>
+<%= form_for @user do |f| %>
+    <%= f.label :name, "用户名" %>
+    <%= f.text_field :name %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :password, "密码" %>
+    <%= f.password_field :password %>
+    <%= f.label :password_confirmation, "请在输入一次" %>
+    <%= f.password_field :password_confirmation %>
+
+    <%= f.submit "注册" %>
+<% end %>
