@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'page#welcome'
   get '/about' => 'page#about'
   get 'signup' => 'users#signup', :as => 'signup'
+  get 'login' => 'users#login', :as => 'login'
   resources :users, only: [:create]
 
   # issues
