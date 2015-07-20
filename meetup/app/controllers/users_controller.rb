@@ -17,6 +17,7 @@ class UsersController < ApplicationController
       redirect_to :login
     end
   end
+
   private
   def user_params
     params.require(:user).permit!
