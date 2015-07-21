@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :issues
 
   # comments
-  post '/issues/:issue_id/comments' => "comments#create"
+  resources :comments, only: [:create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
