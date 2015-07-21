@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     user.save
+    cookies[:auth_token] = user.auth_token
     redirect_to :root
   end
 
