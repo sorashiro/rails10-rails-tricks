@@ -22,5 +22,9 @@
       <%= render partial: 'shared/comment', locals: {c: c} %>
     <% end %>
   </div>
-    <%= render partial: 'shared/comment_box', locals: {issue: @issue} %>
+    <% if current_user %>
+      <%= render partial: 'shared/comment_box', locals: {issue: @issue} %>
+    <% else %>
+      <%= link_to "请登录后评论", login_path %>
+    <% end %>
 </div>
