@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require vendor/jquery.anystretch.min
+//= require jquery.atwho
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
