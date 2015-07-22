@@ -27,21 +27,6 @@
   }
   .body {
     padding: 15px 40px 10px 40px;
-    .highlight {
-      margin-top: 15px;
-      background: #2D3037;
-      padding: 5px 40px;
-      margin-left: -40px;
-      margin-right: -40px;
-      pre {
-        margin-top: 9px;
-      }
-    }
-    textarea {
-      border: none;
-      height: 230px;
-      margin-top: -20px;
-    }
     border-radius: 5px;
     position: relative;
     overflow: visible;
@@ -62,6 +47,21 @@
       border-top: 1px solid #cad5e0;
       -moz-transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg);
+    }
+    .highlight {
+      margin-top: 15px;
+      background: #2D3037;
+      padding: 5px 40px;
+      margin-left: -40px;
+      margin-right: -40px;
+      pre {
+        margin-top: 9px;
+      }
+    }
+    textarea {
+      border: none;
+      height: 200px;
+      margin-top: -10px;
     }
   }
   .avatar {
