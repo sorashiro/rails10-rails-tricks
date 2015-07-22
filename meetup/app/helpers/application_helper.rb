@@ -1,6 +1,12 @@
 module ApplicationHelper
-  def markdown
-    renderer = Redcarpet::Render::HTML.new(filter_html: true, hard_wrap: true)
+  class HTMLwithPygments < Redcarpet::Render::HTML
+    def block_code(code, language)
+      Pygments.highlight(code, lexer: language)
+    end
+  end
+
+  def markdown(text)
+    renderer = HTMLwithPygments.new(filter_html: true, hard_wrap: true)
     #filter_html: true 过滤用户输入的html标签，考虑安全
     #hard_wrap: true 用户如有换行，直接显示出来
     options = {

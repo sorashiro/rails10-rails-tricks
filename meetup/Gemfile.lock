@@ -59,6 +59,10 @@ GEM
     multi_json (1.11.2)
     mysql2 (0.3.18)
     polyglot (0.3.5)
+    posix-spawn (0.3.11)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -113,6 +117,7 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -125,6 +130,7 @@ DEPENDENCIES
   jquery-atwho-rails
   jquery-rails
   mysql2
+  pygments.rb
   rails (= 4.1.2)
   redcarpet
   sass-rails (~> 4.0.3)
