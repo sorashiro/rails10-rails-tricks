@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
-    c = Comment.new(comment_params)
-    c.save
+    @comment = Comment.new(comment_params)
+    @comment.save
     respond_to do |format|
       format.js
     end

@@ -1,0 +1,3 @@
+alert("hello");
+$('.replies').append("<%= j render(partial: 'shared/comment', locals: {c: @comment}) %>");
+<%#escape_javascript 对换行符转义，可简写为 j%>
