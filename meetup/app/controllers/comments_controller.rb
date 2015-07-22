@@ -2,7 +2,9 @@ class CommentsController < ApplicationController
   def create
     c = Comment.new(comment_params)
     c.save
-    redirect_to c.issue
+    respond_to do |format|
+      format.js
+    end
   end
 
   private
