@@ -1,8 +1,10 @@
 <div class="issue-heading">
   <div class="container">
     <%= @issue.title %>
-    <%= link_to 'Destroy', issue_path(@issue), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
-    <%= link_to 'edit', edit_issue_path(@issue), class: "btn btn-primary" %>
+    <% if current_user && current_user == @issue.user %>
+      <%= link_to 'Destroy', issue_path(@issue), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+      <%= link_to 'edit', edit_issue_path(@issue), class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
 <div class="container">
