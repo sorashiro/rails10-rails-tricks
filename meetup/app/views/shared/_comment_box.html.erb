@@ -23,3 +23,11 @@
   });
   $('textarea').atwho({ at: "@", 'data': commenter_exist });
 </script>
+
+<script>>
+  $(".reply textarea#comment_context").keydown(function(e) {
+    if ((e.ctrlKey||e.metaKey) && e.keyCode == 13) {
+      $(".reply input[type=submit]").click();
+    }
+  });
+</script>>
